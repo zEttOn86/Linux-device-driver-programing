@@ -1,0 +1,5 @@
+*.o
+*.out
+*.ko
+*.cmd
+./deploy.sh
