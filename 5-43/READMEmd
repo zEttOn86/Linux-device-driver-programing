@@ -1,0 +1,11 @@
+insmod sample.ko
+lsmod | grep sample
+// major 番号の確認
+cat /proc/devices | grep devone
+// device fileの作成
+// 最初の番号は、major番号に合わせる
+mknod /dev/devone c 255 0
+or
+mknod --mode=666 /dev/devone c `grep devone /proc/devices | awk '{print $1;}'` 0
+// できたか確認
+ls -l /dev/devone

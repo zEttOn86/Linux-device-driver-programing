@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "fs.h": "c",
+        "types.h": "c",
+        "ioctl.h": "c",
+        "limits.h": "c",
+        "poll.h": "c",
+        "sched.h": "c"
+    }
+}

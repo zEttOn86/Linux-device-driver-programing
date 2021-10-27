@@ -1,0 +1,114 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+
+.note.gnu.build-id
+                0x0000000000000000       0x24
+ .note.gnu.build-id
+                0x0000000000000000       0x24 /home/test/PRACTICE/16_practice_race_cond/src/8-6/sample.o
+
+.text           0x0000000000000000       0x37
+ .text          0x0000000000000000       0x37 /home/test/PRACTICE/16_practice_race_cond/src/8-6/sample.o
+                0x0000000000000000                init_module
+                0x0000000000000020                cleanup_module
+ .text          0x0000000000000037        0x0 /home/test/PRACTICE/16_practice_race_cond/src/8-6/sample.mod.o
+
+.text.unlikely  0x0000000000000000        0x0
+ .text.unlikely
+                0x0000000000000000        0x0 /home/test/PRACTICE/16_practice_race_cond/src/8-6/sample.o
+
+/DISCARD/
+ *(.discard)
+ *(.discard.*)
+
+__ksymtab       0x0000000000000000       0x10
+ *(SORT(___ksymtab+*))
+ ___ksymtab+g_sample_counter4
+                0x0000000000000000       0x10 /home/test/PRACTICE/16_practice_race_cond/src/8-6/sample.o
+
+.rodata.str1.1  0x0000000000000000       0x30
+ .rodata.str1.1
+                0x0000000000000000       0x30 /home/test/PRACTICE/16_practice_race_cond/src/8-6/sample.o
+
+__ksymtab_strings
+                0x0000000000000000       0x12
+ __ksymtab_strings
+                0x0000000000000000       0x12 /home/test/PRACTICE/16_practice_race_cond/src/8-6/sample.o
+
+.modinfo        0x0000000000000000       0x8d
+ .modinfo       0x0000000000000000       0x15 /home/test/PRACTICE/16_practice_race_cond/src/8-6/sample.o
+ *fill*         0x0000000000000015        0x3 
+ .modinfo       0x0000000000000018       0x75 /home/test/PRACTICE/16_practice_race_cond/src/8-6/sample.mod.o
+
+__mcount_loc    0x0000000000000000       0x10
+ __mcount_loc   0x0000000000000000       0x10 /home/test/PRACTICE/16_practice_race_cond/src/8-6/sample.o
+
+.data           0x0000000000000000        0x0
+ .data          0x0000000000000000        0x0 /home/test/PRACTICE/16_practice_race_cond/src/8-6/sample.o
+ .data          0x0000000000000000        0x0 /home/test/PRACTICE/16_practice_race_cond/src/8-6/sample.mod.o
+
+.gnu.linkonce.this_module
+                0x0000000000000000      0x340
+ .gnu.linkonce.this_module
+                0x0000000000000000      0x340 /home/test/PRACTICE/16_practice_race_cond/src/8-6/sample.mod.o
+                0x0000000000000000                __this_module
+
+.bss            0x0000000000000000        0xc
+ .bss           0x0000000000000000        0xc /home/test/PRACTICE/16_practice_race_cond/src/8-6/sample.o
+                0x0000000000000000                g_sample_counter4
+                0x0000000000000004                g_sample_counter2
+                0x0000000000000008                g_sample_counter
+ .bss           0x000000000000000c        0x0 /home/test/PRACTICE/16_practice_race_cond/src/8-6/sample.mod.o
+
+__ksymtab_gpl
+ *(SORT(___ksymtab_gpl+*))
+
+__ksymtab_unused
+ *(SORT(___ksymtab_unused+*))
+
+__ksymtab_unused_gpl
+ *(SORT(___ksymtab_unused_gpl+*))
+
+__ksymtab_gpl_future
+ *(SORT(___ksymtab_gpl_future+*))
+
+__kcrctab
+ *(SORT(___kcrctab+*))
+
+__kcrctab_gpl
+ *(SORT(___kcrctab_gpl+*))
+
+__kcrctab_unused
+ *(SORT(___kcrctab_unused+*))
+
+__kcrctab_unused_gpl
+ *(SORT(___kcrctab_unused_gpl+*))
+
+__kcrctab_gpl_future
+ *(SORT(___kcrctab_gpl_future+*))
+
+.init_array
+ *(SORT(.init_array.*))
+ *(.init_array)
+
+__jump_table
+ *(__jump_table)
+LOAD /home/test/PRACTICE/16_practice_race_cond/src/8-6/sample.o
+LOAD /home/test/PRACTICE/16_practice_race_cond/src/8-6/sample.mod.o
+OUTPUT(/home/test/PRACTICE/16_practice_race_cond/src/8-6/sample.ko elf64-x86-64)
+
+.comment        0x0000000000000000       0x6c
+ .comment       0x0000000000000000       0x36 /home/test/PRACTICE/16_practice_race_cond/src/8-6/sample.o
+ .comment       0x0000000000000036       0x36 /home/test/PRACTICE/16_practice_race_cond/src/8-6/sample.mod.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/test/PRACTICE/16_practice_race_cond/src/8-6/sample.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/test/PRACTICE/16_practice_race_cond/src/8-6/sample.mod.o
